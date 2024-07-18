@@ -44,8 +44,8 @@ Sistem monitoring ini terdiri dari dua bagian utama:
 
 ### Persiapan File
 
-- Download dengan klik code lalu download zip
-- unzip folder
+1. Download dengan klik code lalu download zip
+2. Unzip folder
 
 ### Persiapan Hardware
 
