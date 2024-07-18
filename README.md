@@ -42,6 +42,11 @@ Sistem monitoring ini terdiri dari dua bagian utama:
 
 ## Panduan Pemasangan
 
+### Persiapan File
+
+- Download dengan klik code lalu download zip
+- unzip folder
+
 ### Persiapan Hardware
 
 1. Hubungkan sensor suhu ke pin GPIO ESP32 (misalnya pin 4 dan 5)
