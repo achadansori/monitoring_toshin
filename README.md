@@ -17,6 +17,12 @@ Sistem monitoring ini terdiri dari dua bagian utama:
 - Fitur filter data berdasarkan tanggal
 - Fitur penghapusan data
 
+## Node
+
+- Node Chiller berada di Mesin Chiller untuk mengetahui suhu
+- Node Monitor berada di Bengkel untuk mengetahui warning ketika suhu tidak aman
+- Node Web berada di alamat 10.100.4.180/monitoring_toshin untuk mengetahui dashboard dan riwayat di database
+
 ## Komponen Hardware
 
 - ESP32 development board
@@ -53,21 +59,29 @@ Sistem monitoring ini terdiri dari dua bagian utama:
    - OneWire.h (jika menggunakan sensor DS18B20)
    - DallasTemperature.h (jika menggunakan sensor DS18B20)
 
-### Program ESP32
+### Program ESP32 Node Chiller
+
+1. Buka Arduino IDE
+2. Buka file `node_chiller.ino`
+3. Sesuaikan konfigurasi WiFi dan IP statis jika diperlukan
+4. Upload program ke ESP32 di Chiller
+
+### Program ESP32 Node Monitor
 
 1. Buka Arduino IDE
 2. Buka file `node_monitor.ino`
 3. Sesuaikan konfigurasi WiFi dan IP statis jika diperlukan
-4. Upload program ke ESP32
+4. Upload program ke ESP32 di Monitor
 
 ### Persiapan Web Server
 
 1. Install XAMPP
 2. Start Apache dan MySQL dari XAMPP Control Panel
+3. Terhubung ke Wifi TPF-Office untuk wifi tanyakan ke pihak terkait
 
 ### Persiapan Database
 
-1. Buka phpMyAdmin (http://localhost/phpmyadmin)
+1. Buka phpMyAdmin (http://10.100.4.180/phpmyadmin)
 2. Buat database baru dengan nama `monitoring_toshin`
 3. Import file `node_chiller.sql` dan `node_mesin.sql`
 
@@ -85,7 +99,7 @@ Sistem monitoring ini terdiri dari dua bagian utama:
 ## Penggunaan
 
 1. Pastikan ESP32 sudah terhubung ke jaringan WiFi
-2. Buka browser dan akses http://localhost/monitoring_toshin
+2. Buka browser dan akses http://10.100.4.180/monitoring_toshin
 3. Dashboard monitoring akan menampilkan data suhu chiller dan status mesin secara real-time
 4. Gunakan menu di sidebar untuk beralih antara Dashboard, Tabel Chiller, dan Tabel Mesin
 5. Di halaman tabel, gunakan fitur filter tanggal untuk melihat data historis
@@ -100,6 +114,10 @@ Sistem monitoring ini terdiri dari dua bagian utama:
 ## Kontribusi
 
 Proyek ini dikembangkan oleh Elka x Meka PENS 21 untuk Toshin Prima Fine Blanking. Kontribusi dan saran perbaikan sangat diterima.
+
+## Contact Developer
+
+https://achadansori.ee.student.pens.ac.id/
 
 ## Lisensi
 
