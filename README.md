@@ -1,4 +1,4 @@
-# Sistem Monitoring IoT Toshin Prima Fine Blanking
+# Sistem Monitoring Chiller Toshin Prima Fine Blanking
 
 Proyek ini adalah sistem monitoring IoT untuk Toshin Prima Fine Blanking. Sistem ini mencakup pemantauan suhu untuk chiller dan pemantauan status untuk mesin.
 
